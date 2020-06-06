@@ -25,17 +25,18 @@ before_install:
   # Install NPM packages
   - node -v
   - npm -v
+  - npm config set scripts-prepend-node-path true
   - npm -g install neon-cli
   - npm -g install yarn
   - yarn -v
 
 install:
-  - yarn
+  - travis_wait 30 yarn
 
 script:
-  - yarn workspaces run test
-  - yarn workspaces run fmt
-  - yarn workspaces run lint
+  - yarn workspaces foreach run test
+  - yarn workspaces foreach run fmt
+  - yarn workspaces foreach run lint
   - git diff --exit-code
   - if [ -n "$TRAVIS_TAG" ]; then rm -rf packages/indexer/build; yarn workspace @ckb-lumos/indexer run package; fi
 

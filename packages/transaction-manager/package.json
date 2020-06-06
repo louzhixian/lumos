@@ -33,5 +33,9 @@
     "@ckb-lumos/types": "^0.2.5-rc.4",
     "ckb-js-toolkit": "^0.9.1",
     "immutable": "^4.0.0-rc.12"
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "prettier": "^2.0.5"
   }
 }

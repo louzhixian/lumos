@@ -21,6 +21,9 @@
     "test": "ava"
   },
   "devDependencies": {
+    "ava": "^3.8.2",
+    "eslint": "^7.2.0",
+    "prettier": "^2.0.5",
     "rollup": "^1.32.0"
   },
   "bugs": {

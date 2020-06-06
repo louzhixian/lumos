@@ -2,10 +2,5 @@
   "private": true,
   "workspaces": [
     "packages/*"
-  ],
-  "devDependencies": {
-    "ava": "^3.8.2",
-    "eslint": "^7.1.0",
-    "prettier": "^2.0.5"
-  }
+  ]
 }
